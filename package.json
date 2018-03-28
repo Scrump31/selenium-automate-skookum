@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "chromedriver": "^2.37.0",
+    "geckodriver": "^1.11.0",
     "selenium-webdriver": "^3.6.0"
   },
   "devDependencies": {
@@ -13,7 +14,9 @@
     "mocha": "^5.0.4"
   },
   "scripts": {
-    "test": "mocha  ./test/skookumDotCom"
+    "test": "mocha ./test/skookumDotCom",
+    "test-firefox": "SELENIUM_BROWSER=firefox && mocha ./test/skookumDotCom",
+    "test-safari": "SELENIUM_BROWSER=safari && mocha ./test/skookumDotCom"
   },
   "keywords": [],
   "author": "Scottie Crump",
