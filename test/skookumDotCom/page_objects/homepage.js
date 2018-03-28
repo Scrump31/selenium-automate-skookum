@@ -16,7 +16,8 @@ class HomePage extends BasePage {
 	}
 
 	async open() {
-		return this.driver.get('http://skookum.com');
+		await this.driver.get('http://skookum.com');
+		await this.driver.manage().window().maximize();
 	}
     
 	async clickLetsWorkTogetherBtn() {
