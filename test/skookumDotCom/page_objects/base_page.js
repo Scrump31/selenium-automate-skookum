@@ -1,11 +1,7 @@
 /*eslint no-console: "off"*/
 const fs = require('fs');
-const selenium = require('selenium-webdriver');
-const webdriver = new selenium.Builder().forBrowser('chrome').build();
 
-//const By = require('selenium-webdriver').By;
-
-
+const webdriver = require('../../../index');
 class BasePage {
 	constructor() {
 		this.driver = webdriver;
@@ -17,11 +13,8 @@ class BasePage {
 
 	async takeScreenShot() {
 		const screenShot = await this.driver.takeScreenshot();
-		return fs.writeFile(
-			'search-results.png',
-			screenShot,
-			'base64',
-			err => console.error(err)
+		return fs.writeFile('search-results.png', screenShot, 'base64', err =>
+			console.error(err)
 		);
 	}
 
