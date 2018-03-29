@@ -6,11 +6,12 @@ describe('Skookum.com', function() {
 	it('should open and "Skookum - Strategy, Design, Development" is title of page', async function() {
 		await homePage.open();
 		const pageTitle = await homePage.getCurrentPageTitle();
-
+		
 		assert.strictEqual(pageTitle, 'Skookum - Strategy, Design, Development');
 	});
 
 	it('navigates user to Contact Page when "Let\'s Work Together" button clicked ', async function() {
+		await homePage.open();
 		await homePage.clickLetsWorkTogetherBtn();
 		const confirmOnContactPage = await homePage.getCurrentPageTitle();
 
