@@ -16,8 +16,8 @@
   },
   "scripts": {
     "test": "mocha ./test/skookumDotCom",
-    "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/skookumDotCom && npm run reports",
-    "test-safari": "SELENIUM_BROWSER=safari mocha ./test/skookumDotCom && npm run reports",
+    "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/skookumDotCom",
+    "test-safari": "SELENIUM_BROWSER=safari mocha ./test/skookumDotCom",
     "test-browserstack": "export NODE_ENV=browserstack && mocha ./test/skookumDotCom"
   },
   "keywords": [],
