@@ -5,6 +5,7 @@ const webdriver = require('../../../index');
 class BasePage {
 	constructor() {
 		this.driver = webdriver;
+		this.pageTitle;
 	}
 
 	async getCurrentPageTitle() {
