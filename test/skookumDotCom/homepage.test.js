@@ -18,7 +18,7 @@ describe('Skookum.com', function() {
 		assert.strictEqual(confirmOnContactPage, 'Skookum - Contact');
 	});
     
-	it('navigates user to About Page when "Get To Know Us" button clicked ', async function() {
+	xit('navigates user to About Page when "Get To Know Us" button clicked ', async function() {
 		await homePage.open();
 		await homePage.clickGetToKnowUsBtn();
 		const confirmOnAboutPage = await homePage.getCurrentPageTitle();
@@ -26,7 +26,7 @@ describe('Skookum.com', function() {
 		assert.strictEqual(confirmOnAboutPage, 'Skookum - About');
 	});
     
-	it('navigates user to Services Page when "View Services" button clicked ', async function() {
+	xit('navigates user to Services Page when "View Services" button clicked ', async function() {
 		await homePage.open();
 		await homePage.clickViewServicesBtn();
 		const confirmOnServicesPage = await homePage.getCurrentPageTitle();
@@ -34,7 +34,7 @@ describe('Skookum.com', function() {
 		assert.strictEqual(confirmOnServicesPage, 'Skookum - Services');
 	});
     
-	it('navigates user to Premier Case Study when "Explore the case study" button under Premier Inc. clicked ', async function() {
+	xit('navigates user to Premier Case Study when "Explore the case study" button under Premier Inc. clicked ', async function() {
 		await homePage.open();
 		await homePage.clickExploreTheCaseStudyPremierBtn();
 		const confirmOnPremierPage = await homePage.getCurrentPageTitle();
@@ -42,7 +42,7 @@ describe('Skookum.com', function() {
 		assert.strictEqual(confirmOnPremierPage, 'Case Study - Premier Inc');
 	});
     
-	it('navigates user to Library Case Study when "Explore the case study" button under Charlotte Mecklenburg Library. clicked ', async function() {
+	xit('navigates user to Library Case Study when "Explore the case study" button under Charlotte Mecklenburg Library. clicked ', async function() {
 		await homePage.open();
 		await homePage.clickExploreTheCaseStudyLibraryBtn();
 		const confirmOnLibraryPage = await homePage.getCurrentPageTitle();
@@ -50,7 +50,7 @@ describe('Skookum.com', function() {
 		assert.strictEqual(confirmOnLibraryPage, 'Case Study - Charlotte Mecklenburg Library');
 	});
     
-	it('navigates user to High Point Case Study when "Explore the case study" button under High Point Market. clicked ', async function() {
+	xit('navigates user to High Point Case Study when "Explore the case study" button under High Point Market. clicked ', async function() {
 		await homePage.open();
 		await homePage.clickExploreTheCaseStudyHighPointBtn();
 		const confirmOnHighPointPage = await homePage.getCurrentPageTitle();

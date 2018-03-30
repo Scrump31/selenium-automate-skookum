@@ -11,12 +11,13 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
-    "mocha": "^5.0.4"
+    "mocha": "^5.0.4",
+    "mochawesome": "^3.0.2"
   },
   "scripts": {
     "test": "mocha ./test/skookumDotCom",
-    "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/skookumDotCom",
-    "test-safari": "SELENIUM_BROWSER=safari mocha ./test/skookumDotCom",
+    "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/skookumDotCom && npm run reports",
+    "test-safari": "SELENIUM_BROWSER=safari mocha ./test/skookumDotCom && npm run reports",
     "test-browserstack": "export NODE_ENV=browserstack && mocha ./test/skookumDotCom"
   },
   "keywords": [],
