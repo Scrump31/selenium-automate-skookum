@@ -1,5 +1,4 @@
 const By = require('selenium-webdriver').By;
-const until = require('selenium-webdriver/lib/until');
 const BasePage = require('./base_page');
 
 // Locators
@@ -34,48 +33,36 @@ class HomePage extends BasePage {
 	getExploreTheCaseStudyHighPointBtn(){
 		return this.driver.findElement(By.css(_exploreTheCaseStudyHighPointBtn));
 	}
-	
-	// Action Methods
-	async open() {
-		this.driver.get('http://skookum.com');
-		this.driver.manage().window().maximize();
-		this.pageTitle = await this.getCurrentPageTitle();	
-	}
-	
+
+	// Action Methods	
 	async clickLetsWorkTogetherBtn() {
 		this.getLetsWorkTogetherBtn().click();
-		this.driver.wait(until.urlContains('contact'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('contact');
 	}
     
 	async clickGetToKnowUsBtn() {
 		this.getGetToKnowUsBtn().click();
-		this.driver.wait(until.urlContains('about'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('about');
 	}
     
 	async clickViewServicesBtn() {
 		this.getViewServicesBtn().click();
-		this.driver.wait(until.urlContains('services'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('services');
 	}
     
 	async clickExploreTheCaseStudyPremierBtn() {
 		this.getExploreTheCaseStudyPremierBtn().click();
-		this.driver.wait(until.urlContains('premier'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('premier');
 	}
     
 	async clickExploreTheCaseStudyLibraryBtn() {
 		this.getExploreTheCaseStudyLibraryBtn().click();
-		this.driver.wait(until.urlContains('library'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('library');
 	}
     
 	async clickExploreTheCaseStudyHighPointBtn() {
 		this.getExploreTheCaseStudyHighPointBtn().click();
-		this.driver.wait(until.urlContains('high-point'), 3000);
-		this.pageTitle = await this.getCurrentPageTitle();	
+		await this.verifyPageUpdatedTo('high-point');
 	}
 }
 const homePage = new HomePage();
