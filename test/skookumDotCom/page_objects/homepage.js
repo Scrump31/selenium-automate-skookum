@@ -2,57 +2,78 @@ const By = require('selenium-webdriver').By;
 const until = require('selenium-webdriver/lib/until');
 const BasePage = require('./base_page');
 
-const letsWorkTogetherBtn = By.css('.page-header__content [href="/contact"]');
-const getToKnowUsBtn = By.css('.intro__markdown [href="/about"]');
-const viewServicesBtn = By.css('.services__link');
-const exploreTheCaseStudyPremierBtn = By.css('[href="/case-study/premier"]');
-const exploreTheCaseStudyLibraryBtn = By.css('[href="/case-study/charlotte-library"]');
-const exploreTheCaseStudyHighPointBtn = By.css('[href="/case-study/high-point"]');
-
+// Locators
+const _letsWorkTogetherBtn = '.page-header__content [href="/contact"]';
+const _getToKnowUsBtn = '.intro__markdown [href="/about"]';
+const _viewServicesBtn = '.services__link';
+const _exploreTheCaseStudyPremierBtn = '[href="/case-study/premier"]';
+const _exploreTheCaseStudyLibraryBtn = '[href="/case-study/charlotte-library"]';
+const _exploreTheCaseStudyHighPointBtn = '[href="/case-study/high-point"]';
 
 class HomePage extends BasePage {
 	constructor(driver) {
 		super(driver);
 	}
 
+	// Getter Methods
+	getLetsWorkTogetherBtn() {
+		return this.driver.findElement(By.css(_letsWorkTogetherBtn));
+	}
+	getGetToKnowUsBtn() {
+		return this.driver.findElement(By.css(_getToKnowUsBtn));
+	}
+	getViewServicesBtn(){
+		return this.driver.findElement(By.css(_viewServicesBtn));
+	}
+	getExploreTheCaseStudyPremierBtn(){
+		return this.driver.findElement(By.css(_exploreTheCaseStudyPremierBtn));
+	}
+	getExploreTheCaseStudyLibraryBtn(){
+		return this.driver.findElement(By.css(_exploreTheCaseStudyLibraryBtn));
+	}
+	getExploreTheCaseStudyHighPointBtn(){
+		return this.driver.findElement(By.css(_exploreTheCaseStudyHighPointBtn));
+	}
+	
+	// Action Methods
 	async open() {
 		this.driver.get('http://skookum.com');
 		this.driver.manage().window().maximize();
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
-    
+	
 	async clickLetsWorkTogetherBtn() {
-		this.driver.findElement(letsWorkTogetherBtn).click();
+		this.getLetsWorkTogetherBtn().click();
 		this.driver.wait(until.urlContains('contact'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
     
 	async clickGetToKnowUsBtn() {
-		this.driver.findElement(getToKnowUsBtn).click();
+		this.getGetToKnowUsBtn().click();
 		this.driver.wait(until.urlContains('about'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
     
 	async clickViewServicesBtn() {
-		this.driver.findElement(viewServicesBtn).click();
+		this.getViewServicesBtn().click();
 		this.driver.wait(until.urlContains('services'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
     
 	async clickExploreTheCaseStudyPremierBtn() {
-		this.driver.findElement(exploreTheCaseStudyPremierBtn).click();
+		this.getExploreTheCaseStudyPremierBtn().click();
 		this.driver.wait(until.urlContains('premier'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
     
 	async clickExploreTheCaseStudyLibraryBtn() {
-		this.driver.findElement(exploreTheCaseStudyLibraryBtn).click();
+		this.getExploreTheCaseStudyLibraryBtn().click();
 		this.driver.wait(until.urlContains('library'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
     
 	async clickExploreTheCaseStudyHighPointBtn() {
-		this.driver.findElement(exploreTheCaseStudyHighPointBtn).click();
+		this.getExploreTheCaseStudyHighPointBtn().click();
 		this.driver.wait(until.urlContains('high-point'), 3000);
 		this.pageTitle = await this.getCurrentPageTitle();	
 	}
