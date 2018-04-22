@@ -2,8 +2,13 @@ const By = require('selenium-webdriver').By;
 const BasePage = require('./base_page');
 
 // Locators
-const _premierInc_LearnMore_Link = '.project__tile:nth-of-type(1) .project__cta';
-const _jri_Shocks_Link = '.project__tile:nth-of-type(2) .project__cta';
+const _premierInc_LearnMore_Link = '//h2[text()="Premier Inc: Technology That’s Transforming Healthcare"]';
+const _jri_Shocks_Link = '//h2[text()="JRi Shocks"]';
+const _metal_Marketing_Link = '//h2[text()="Metal Marketing"]';
+const _rj_Reynolds_Tobacco_Link = '//h2[text()="RJ Reynolds Tobacco"]';
+const _cola_Consolidated_Link = '//h2[text()="Coca-Cola Consolidated"]';
+const _electric_Power_Link = '//h2[text()="Electric Power Research Institute (EPRI)"]';
+const _adac_Automotive = '//h2[text()="ADAC Automotive"]';
 
 class WorkPage extends BasePage {
 	constructor(driver) {
