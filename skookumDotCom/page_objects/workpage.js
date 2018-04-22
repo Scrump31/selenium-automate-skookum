@@ -17,10 +17,13 @@ class WorkPage extends BasePage {
 
 	// Getter Methods
 	getPremierInc_LearnMore_Link(){
-		return this.driver.findElement(By.css(_premierInc_LearnMore_Link));
+		return this.driver.findElement(By.xpath(_premierInc_LearnMore_Link));
 	}
 	getJri_Shocks_Link(){
-		return this.driver.findElement(By.css(_jri_Shocks_Link));
+		return this.driver.findElement(By.xpath(_jri_Shocks_Link));
+	}
+	getMetal_Marketing_Link(){
+		return this.driver.findElement(By.xpath(_metal_Marketing_Link));
 	}
 
 
@@ -35,8 +38,12 @@ class WorkPage extends BasePage {
 		await this.verifyPageUpdatedTo('jri-shocks');
 	}
 
-    
+	async click_Metal_Marketing_Link() {
+		this.getMetal_Marketing_Link().click();
+		await this.verifyPageUpdatedTo('metal-marketing');
+	}
 }
+
 const workPage = new WorkPage();
 
 module.exports = workPage;

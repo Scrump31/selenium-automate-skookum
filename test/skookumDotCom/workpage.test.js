@@ -11,7 +11,7 @@ describe('Skookum.com/work', function() {
     
 	it('navigates user to Premier Inc Work Page when "Learn More" link clicked ', async function() {
 		await workpage.openPage('work');
-		await workpage.click_Jri_Shocks_Link();
+		await workpage.click_premierInc_LearnMore_Link();
 
 		assert.strictEqual(workpage.pageTitle, 'Case Study - Premier Inc');
 	});
@@ -21,6 +21,13 @@ describe('Skookum.com/work', function() {
 		await workpage.click_Jri_Shocks_Link();
 
 		assert.strictEqual(workpage.pageTitle, 'Case Study - JRi Shocks');
+	});
+    
+	it('navigates user to Metal Marketing Work Page when "Learn More" link clicked ', async function() {
+		await workpage.openPage('work');
+		await workpage.click_Metal_Marketing_Link();
+
+		assert.strictEqual(workpage.pageTitle, 'Case Study - Metal Marketing');
 	});
     
 	after(async function() {
