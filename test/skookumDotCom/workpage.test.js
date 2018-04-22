@@ -8,7 +8,7 @@ describe('Skookum.com/work', function() {
 
 		assert.strictEqual(workpage.pageTitle, 'Our Work');
 	});
-    
+
 	it('navigates user to Premier Inc Work Page when "Learn More" link clicked ', async function() {
 		await workpage.openPage('work');
 		await workpage.click_premierInc_LearnMore_Link();
@@ -22,7 +22,7 @@ describe('Skookum.com/work', function() {
 
 		assert.strictEqual(workpage.pageTitle, 'Case Study - JRi Shocks');
 	});
-    
+
 	it('navigates user to Metal Marketing Work Page when "Learn More" link clicked ', async function() {
 		await workpage.openPage('work');
 		await workpage.click_Metal_Marketing_Link();
@@ -36,7 +36,33 @@ describe('Skookum.com/work', function() {
 		assert.strictEqual(workpage.pageTitle, 'Case Study - RJ Reynolds Tobacco');
 	});
 
-    
+	it('navigates user to Coca-Cola Consolidated Work Page when "Learn More" link clicked ', async function() {
+		await workpage.openPage('work');
+		await workpage.click_cola_Consolidated_Link();
+
+		assert.strictEqual(
+			workpage.pageTitle,
+			'Case Study - Coca-Cola Consolidated'
+		);
+	});
+
+	it('navigates user to (EPRI) Work Page when "Learn More" link clicked ', async function() {
+		await workpage.openPage('work');
+		await workpage.click_Electric_Power_Link();
+
+		assert.strictEqual(
+			workpage.pageTitle,
+			'Case Study - Electric Power Research Institute (EPRI)'
+		);
+	});
+
+	it('navigates user to ADAC Automotive Work Page when "Learn More" link clicked ', async function() {
+		await workpage.openPage('work');
+		await workpage.click_Adac_Automotive_Link();
+
+		assert.strictEqual(workpage.pageTitle, 'Case Study - ADAC Automotive');
+	});
+
 	after(async function() {
 		await workpage.endTest();
 	});
