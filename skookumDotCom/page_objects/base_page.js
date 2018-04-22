@@ -2,7 +2,7 @@
 const fs = require('fs');
 const until = require('selenium-webdriver/lib/until');
 
-const webdriver = require('../../../index');
+const webdriver = require('../../index');
 class BasePage {
 	constructor() {
 		this.driver = webdriver;

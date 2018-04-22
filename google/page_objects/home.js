@@ -2,6 +2,7 @@
 const fs = require('fs');
 const selenium = require('selenium-webdriver');
 const webdriver = new selenium.Builder().forBrowser('chrome').build();
+const until = require('selenium-webdriver/lib/until');
 
 const By = require('selenium-webdriver').By;
 
@@ -11,19 +12,19 @@ const submitBtn = By.css('[value="Google Search"]');
 class HomePage {
 	constructor() {
 		this.driver = webdriver;
+		this.pageTitle;
 	}
 
 	async open() {
-		return this.driver.get('http://google.com');
+		this.driver.get('http://google.com');
+		this.pageTitle = await this.driver.getTitle();
 	}
 
-	async googleSearch(searchText) {
+	async googleSearchFor(searchText) {
 		await this.driver.findElement(searchField).sendKeys(searchText);
-		await this.driver.findElement(submitBtn).submit();
-	}
-
-	async getPageTitle() {
-		return this.driver.getTitle();
+		this.driver.findElement(submitBtn).submit();
+		await this.driver.wait(until.urlContains(searchText), 3000);
+		this.pageTitle = await this.driver.getTitle();
 	}
 
 	async takeScreenShot() {

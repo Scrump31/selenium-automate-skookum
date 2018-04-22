@@ -1,6 +1,6 @@
 const { assert } = require('chai');
 
-const homepage = require('./page_objects/homepage');
+const homepage = require('../../skookumDotCom/page_objects/homepage');
 
 describe('Skookum.com', function() {
 	it('should open and "Skookum - Strategy, Design, Development" is title of page', async function() {
