@@ -26,6 +26,9 @@ class WorkPage extends BasePage {
 		return this.driver.findElement(By.xpath(_metal_Marketing_Link));
 	}
 
+	getRJ_Reynolds_Tobacco_Link(){
+		return this.driver.findElement(By.xpath(_rj_Reynolds_Tobacco_Link));
+	}
 
 	// Action Methods	
 	async click_premierInc_LearnMore_Link() {
@@ -42,6 +45,11 @@ class WorkPage extends BasePage {
 		this.getMetal_Marketing_Link().click();
 		await this.verifyPageUpdatedTo('metal-marketing');
 	}
+	async click_RJ_Reynolds_Tobacco_Link() {
+		this.getRJ_Reynolds_Tobacco_Link().click();
+		await this.verifyPageUpdatedTo('rj-reynolds');
+	}
+
 }
 
 const workPage = new WorkPage();

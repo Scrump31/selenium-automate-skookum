@@ -29,6 +29,13 @@ describe('Skookum.com/work', function() {
 
 		assert.strictEqual(workpage.pageTitle, 'Case Study - Metal Marketing');
 	});
+	it('navigates user to RJ Reynolds Tobacco Work Page when "Learn More" link clicked ', async function() {
+		await workpage.openPage('work');
+		await workpage.click_RJ_Reynolds_Tobacco_Link();
+
+		assert.strictEqual(workpage.pageTitle, 'Case Study - RJ Reynolds Tobacco');
+	});
+
     
 	after(async function() {
 		await workpage.endTest();
