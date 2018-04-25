@@ -3,9 +3,9 @@ const { assert } = require('chai');
 const navBar = require('../../skookumDotCom/page_objects/navigation_page');
 
 describe('Skookum.com Navigation Bar', function() {
-	it('navigates user to Home Page when "Skookum Logo" is clicked', async function() {
+	it('Opens skookum.com and navigates user to Home Page when "Skookum Logo" is clicked', async function() {
 		await navBar.openPage();
-		await navBar.getLogo_link();
+		await navBar.click_logo_Link();
 
 		assert.strictEqual(
 			navBar.pageTitle,
