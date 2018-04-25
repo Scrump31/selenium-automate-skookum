@@ -4,3 +4,9 @@ node_js:
 notifications:
   slack:
     secure: jDfW5pX0ah2nBVXNCd4NhcswKF/l+HbnNNw21jk7rTZA1fIDD7E1KhZvZL0x/QtLePTg9pjUOmzJJ31uwPxqHTGnTDLJ4ELrsm+iFkVgL0kTgNXxjPfRKDDk6Aw5gyfisfwzNv4/mw9zGl5Pi117ni/R2KQxWIn+plg26yozHtleNO4hz8XZXCvj6EVSUNZLhCzzwG4m59ft18LRd3/1AQW+V2sj9jpwERHwM/gPpcJDU2Aurm6q7mBDxTCaYOExzdyfda2JU0R2YqecguzR11ZmyZATk1kdCcWLSs0oJz7c0Hhj2DsLw1DOYTFdXHC6rQfInD4BnMnk1cxZ7GgQ258aGk0MHVBjIdGNm3HhwN6AqEv9leQCkRmxKLLtb7F+DP2MlJ4mbfwLumcJLhuL4MlLDfS2DCwaG55CPGAItCLy5MiOHfZQlPK6QNk0ADoDiCtfIOiQpiyy/kNe6JFYJJqPdTfaov0mjTg6Da1B4q38QxZaq3iNNfH51CMV+aHicF32H61wq+ircb2dYROQR4baODbx5LEI20XrVYIgP/UZpV3dBavoRvxs8iF170Wrs2Bz1w9nGlUkhyVgyq5lppK6UJaAZHt/vPxxkQzLRyjkXSw44Pp5n+3NrUd86o6crBfVSYewsAHzLzKhoxbk10kSNB60OD68Pm35l51gzns=
+addons:
+  chrome: beta
+before_install:
+  - # start your web application and listen on `localhost`
+  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
+  ⋮
