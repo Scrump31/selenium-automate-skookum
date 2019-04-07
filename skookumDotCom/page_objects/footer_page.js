@@ -6,13 +6,13 @@ const _careers_link = 'a.footer__link[href="/careers"]';
 const _open_source_link = 'a.footer__link[href="https://github.com/Skookum"]';
 const _privacy_policy_link = 'a.footer__link[href="/privacy"]';
 const _contact_us_link = 'a.footer__link[href="/contact"]';
-const _twitter_link = 'a.footer__link[href="https://twitter.com/skookum"]';
-const _facebook_link = 'a.footer__link[href="https://facebook.com/SkookumInc"]';
+const _twitter_link = 'a.footer__link[href="https://twitter.com/Skookum"]';
+const _facebook_link = 'a.footer__link[href="https://www.facebook.com/SkookumInc/"]';
 const _linkedIn_link =
 	'a.footer__link[href="https://www.linkedin.com/company/skookum/"]';
-const _dribbble_link = 'a.footer__link[href="http://dribbble.com/skookum"]';
+const _dribbble_link = 'a.footer__link[href="https://dribbble.com/skookum"]';
 const _instagram_link =
-	'a.footer__link[href="http://instagram.com/skookuminc"]';
+	'a.footer__link[href="https://www.instagram.com/skookum_inc/"]';
 
 class Footer extends BasePage {
 	constructor(driver) {

@@ -26,7 +26,7 @@ describe('Skookum.com Footer', function() {
 		await footer.openPage();
 		await footer.click_ContactUs_Link();
 
-		assert.strictEqual(footer.pageTitle, 'Skookum - Contact');
+		assert.strictEqual(footer.pageTitle, 'Contact Us | Skookum');
 	});
 	it('navigates user to Skookum Facebook Page when "Facebook" link clicked ', async function() {
 		await footer.openPage();
@@ -51,7 +51,7 @@ describe('Skookum.com Footer', function() {
 		await footer.openPage();
 		await footer.click_Dribbble_Link();
 
-		assert.strictEqual(footer.pageTitle, 'Skookum - Dribbble');
+		assert.strictEqual(footer.pageTitle, 'Skookum | Dribbble');
 	});
 	it('navigates user to Skookum Instagram Page when "Instagram" link clicked ', async function() {
 		await footer.openPage();
@@ -59,7 +59,7 @@ describe('Skookum.com Footer', function() {
 
 		assert.strictEqual(
 			footer.pageTitle,
-			'Skookum (@skookuminc) • Instagram photos and videos'
+			'Skookum (@skookum_inc) • Instagram photos and videos'
 		);
 	});
 
