@@ -6,7 +6,7 @@ const _letsWorkTogetherBtn = '.page-header__content [href="/contact"]';
 const _getToKnowUsBtn = '.intro__markdown [href="/about"]';
 const _viewServicesBtn = '.services__link';
 const _exploreTheCaseStudyPremierBtn = '[href="/case-study/premier"]';
-const _exploreTheCaseStudyLibraryBtn = '[href="/case-study/charlotte-library"]';
+const _exploreTheCaseStudyLibraryBtn = '[href="/case-study/charlotte-mecklenburg-library"]';
 const _exploreTheCaseStudyHighPointBtn = '[href="/case-study/high-point"]';
 
 class HomePage extends BasePage {

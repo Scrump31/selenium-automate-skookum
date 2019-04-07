@@ -13,7 +13,7 @@ describe('Skookum.com', function() {
 		await homepage.openPage();
 		await homepage.clickLetsWorkTogetherBtn();
 
-		assert.strictEqual(homepage.pageTitle, 'Skookum - Contact');
+		assert.strictEqual(homepage.pageTitle, 'Contact Us | Skookum');
 	});
     
 	it('navigates user to About Page when "Get To Know Us" button clicked', async function() {
