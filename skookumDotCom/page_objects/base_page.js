@@ -9,7 +9,7 @@ class BasePage {
 		this.pageTitle;
 	}
 	async openPage(url) {
-		const base = 'http://www.skookum.com';
+		const base = 'https://skookum.com/';
 
 		switch (url) {
 		case 'home'.toLowerCase():
@@ -62,7 +62,8 @@ class BasePage {
 	}
 
 	async endTest() {
-		return this.driver.quit();
+		// https://github.com/cucumber/cucumber-js/issues/709#issuecomment-440260870
+		return this.driver = null;
 	}
 }
 
