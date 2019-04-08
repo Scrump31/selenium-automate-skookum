@@ -1,6 +1,6 @@
 const { assert } = require('chai');
 
-const footer = require('../../skookumDotCom/page_objects/footer_page');
+const footer = require('../page_objects/footer_page');
 
 describe('Skookum.com Footer', function() {
 	it('navigates user to Careers Page when "Careers" link clicked ', async function() {
