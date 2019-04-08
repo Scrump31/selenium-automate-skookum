@@ -40,7 +40,7 @@ describe('Skookum.com Navigation Bar', function() {
 	it('navigates user to Contact Page when "Contact" link is clicked', async function() {
 		await navBar.click_contact_Link();
 		
-		assert.strictEqual(navBar.pageTitle, 'Skookum - Contact');
+		assert.strictEqual(navBar.pageTitle, 'Contact Us | Skookum');
 	});
 
 	after(async function() {
