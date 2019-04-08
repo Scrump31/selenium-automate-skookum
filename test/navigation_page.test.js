@@ -1,6 +1,6 @@
 const { assert } = require('chai');
 
-const navBar = require('../../skookumDotCom/page_objects/navigation_page');
+const navBar = require('../page_objects/navigation_page');
 
 describe('Skookum.com Navigation Bar', function() {
 	it('Opens skookum.com and navigates user to Home Page when "Skookum Logo" is clicked', async function() {

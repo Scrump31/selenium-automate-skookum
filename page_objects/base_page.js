@@ -2,7 +2,7 @@
 const fs = require('fs');
 const until = require('selenium-webdriver/lib/until');
 
-const webdriver = require('../../index');
+const webdriver = require('../index');
 class BasePage {
 	constructor() {
 		this.driver = webdriver;
@@ -47,6 +47,7 @@ class BasePage {
 
 	async verifyPageUpdatedTo(page) {
 		this.driver.wait(until.urlContains(page.toLowerCase()), 3000);
+		this.driver.sleep(500);
 		this.pageTitle = await this.getCurrentPageTitle();
 	}
 
