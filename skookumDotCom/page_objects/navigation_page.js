@@ -40,31 +40,31 @@ class NavBar extends BasePage {
 
 	// Action Methods
 	async click_logo_Link() {
-		this.getLogo_link().click();
+		await this.getLogo_link().click();
 		await this.verifyPageUpdatedTo('skookum');
 	}
 	async click_services_Link() {
-		this.getServices_link().click();
+		await this.getServices_link().click();
 		await this.verifyPageUpdatedTo('services');
 	}
 	async click_work_Link() {
-		this.getWork_link().click();
+		await this.getWork_link().click();
 		await this.verifyPageUpdatedTo('work');
 	}
 	async click_blog_Link() {
-		this.getBlog_link().click();
+		await this.getBlog_link().click();
 		await this.verifyPageUpdatedTo('blog');
 	}
 	async click_events_Link() {
-		this.getEvents_link().click();
+		await this.getEvents_link().click();
 		await this.verifyPageUpdatedTo('events');
 	}
 	async click_about_Link() {
-		this.getAbout_link().click();
+		await this.getAbout_link().click();
 		await this.verifyPageUpdatedTo('about');
 	}
 	async click_contact_Link() {
-		this.getContact_link().click();
+		await this.getContact_link().click();
 		await this.verifyPageUpdatedTo('contact');
 	}
 }
