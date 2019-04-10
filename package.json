@@ -15,10 +15,8 @@
     "eslint": "^4.19.1"
   },
   "scripts": {
-    "test": "npm run test-chrome",
-    "test-chrome": "cucumber-js",
-    "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/",
-    "test-safari": "SELENIUM_BROWSER=safari mocha ./test/",
+    "test": "./node_modules/.bin/cucumber-js",
+    "test:firefox": "SELENIUM_BROWSER=firefox ./node_modules/.bin/cucumber-js",
     "commit": "git-cz"
   },
   "keywords": [],
