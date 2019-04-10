@@ -1,7 +1,7 @@
 {
-  "name": "selenium-basics",
+  "name": "selenium-automate-skookum",
   "version": "1.0.0",
-  "description": "A repo to learn the basics of Selenium Webdriver",
+  "description": "UI Automated tests against Skookum.com using Selenium and Cucumber in JavaScript",
   "main": "index.js",
   "dependencies": {
     "chromedriver": "^2.46.0",
@@ -19,7 +19,7 @@
     "test:firefox": "SELENIUM_BROWSER=firefox ./node_modules/.bin/cucumber-js",
     "commit": "git-cz"
   },
-  "keywords": [],
+  "keywords": ["selenium-webdriver", "cucumber-js", "nodejs"],
   "author": "Scottie Crump",
   "license": "ISC"
 }
