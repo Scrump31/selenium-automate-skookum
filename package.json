@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "npm run test-chrome",
-    "test-chrome": "mocha ./test/",
+    "test-chrome": "cucumber-js",
     "test-firefox": "SELENIUM_BROWSER=firefox mocha ./test/",
     "test-safari": "SELENIUM_BROWSER=safari mocha ./test/",
     "commit": "git-cz"
