@@ -19,7 +19,11 @@
     "test:firefox": "SELENIUM_BROWSER=firefox ./node_modules/.bin/cucumber-js",
     "commit": "git-cz"
   },
-  "keywords": ["selenium-webdriver", "cucumber-js", "nodejs"],
+  "keywords": [
+    "selenium-webdriver",
+    "cucumber-js",
+    "nodejs"
+  ],
   "author": "Scottie Crump",
   "license": "ISC"
 }
